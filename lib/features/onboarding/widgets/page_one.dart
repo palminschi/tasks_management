@@ -19,21 +19,23 @@ class PageOne extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            padding: EdgeInsets.symmetric(horizontal: 32.w),
             child: Image.asset("assets/images/img_girl_2.png"),
           ),
-          const SizedBox(height: 100),
+          SizedBox(height: 30.h),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ReusableText(
                   text: "ToDo with Riverpod",
                   style: appStyle(30, AppConst.kLight, FontWeight.w600)),
-              SizedBox(height: 100.h,),
+              SizedBox(
+                height: 20.h,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.w),
                 child: Text(
-                    "Welcome! Do you want to create a task fast and with ease",
+                  "Welcome! Do you want to create a task fast and with ease",
                   textAlign: TextAlign.center,
                   style: appStyle(16, AppConst.kGreyLight, FontWeight.normal),
                 ),
