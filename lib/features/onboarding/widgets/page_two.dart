@@ -5,6 +5,7 @@ import 'package:tasks_management/common/utils/constants.dart';
 import '../../../common/widgets/appstyle.dart';
 import '../../../common/widgets/custom_otn_btn.dart';
 import '../../../common/widgets/reusable_text.dart';
+import '../../auth/pages/login_page.dart';
 
 class PageTwo extends StatelessWidget {
   const PageTwo({Key? key}) : super(key: key);
@@ -27,13 +28,13 @@ class PageTwo extends StatelessWidget {
           CustomOutlineButton(
               onTap: () {
                 Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => LoginPage()
+                    MaterialPageRoute(builder: (context) => const LoginPage()
                     )
                 );
               },
               width: AppConst.kWidth * 0.9,
               height: AppConst.kHeight * 0.06,
-              color: AppConst.kLight,
+              colorText: AppConst.kLight,
               text: "Login with a phone number"
           )
         ],

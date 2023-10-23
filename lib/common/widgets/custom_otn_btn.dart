@@ -8,15 +8,15 @@ class CustomOutlineButton extends StatelessWidget {
       this.onTap,
       required this.width,
       required this.height,
-      this.color2,
-      required this.color, required this.text})
+      this.colorBackground,
+      required this.colorText, required this.text})
       : super(key: key);
 
   final void Function()? onTap;
   final double width;
   final double height;
-  final Color? color2;
-  final Color color;
+  final Color? colorBackground;
+  final Color colorText;
   final String text;
 
   @override
@@ -27,13 +27,13 @@ class CustomOutlineButton extends StatelessWidget {
         width: width,
         height: height,
         decoration: BoxDecoration(
-            color: color2,
+            color: colorBackground,
             borderRadius: const BorderRadius.all(Radius.circular(12)),
-            border: Border.all(width: 1, color: color)),
+            border: Border.all(width: 1, color: colorText)),
         child: Center(
           child: ReusableText(
             text: text,
-            style: appStyle(18, color, FontWeight.bold),
+            style: appStyle(18, colorText, FontWeight.bold),
           ),
         ),
       ),
