@@ -33,7 +33,7 @@ class PageTwo extends StatelessWidget {
                 );
               },
               width: AppConst.kWidth * 0.9,
-              height: AppConst.kHeight * 0.06,
+              height: AppConst.kHeight * 0.09,
               colorText: AppConst.kLight,
               text: "Login with a phone number"
           )

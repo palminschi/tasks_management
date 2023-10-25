@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:tasks_management/common/utils/constants.dart';
 import 'package:tasks_management/common/widgets/appstyle.dart';
 import 'package:tasks_management/common/widgets/reusable_text.dart';
 
 class CustomOutlineButton extends StatelessWidget {
   const CustomOutlineButton(
       {Key? key,
-      this.onTap,
-      required this.width,
-      required this.height,
+      this.onTap, this.width, this.height,
       this.colorBackground,
-      required this.colorText, required this.text})
+      required this.colorText,
+      required this.text})
       : super(key: key);
 
   final void Function()? onTap;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final Color? colorBackground;
   final Color colorText;
   final String text;
@@ -24,11 +24,11 @@ class CustomOutlineButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: width,
+        width: width ?? AppConst.kWidth * 0.8,
         height: height,
         decoration: BoxDecoration(
             color: colorBackground,
-            borderRadius: const BorderRadius.all(Radius.circular(12)),
+            borderRadius: BorderRadius.all(Radius.circular(AppConst.kRadius)),
             border: Border.all(width: 1, color: colorText)),
         child: Center(
           child: ReusableText(

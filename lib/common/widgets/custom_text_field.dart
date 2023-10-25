@@ -16,8 +16,9 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      width: AppConst.kWidth*0.8,
+      width: AppConst.kWidth*0.85,
       decoration: BoxDecoration(
+        color: AppConst.kLight,
         borderRadius: BorderRadius.all(Radius.circular(AppConst.kRadius))
       ),
       child: TextFormField(
