@@ -8,6 +8,7 @@ import 'package:tasks_management/common/widgets/custom_otn_btn.dart';
 import 'package:tasks_management/common/widgets/reusable_text.dart';
 
 import '../../../common/widgets/custom_text_field.dart';
+import 'otp_page.dart';
 
 class LoginPage extends ConsumerStatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -92,7 +93,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
               Center(
                 child: CustomOutlineButton(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> OtpPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const OtpPage()));
                     },
                     width: AppConst.kWidth * 0.85,
                     height: AppConst.kHeight * 0.09,
